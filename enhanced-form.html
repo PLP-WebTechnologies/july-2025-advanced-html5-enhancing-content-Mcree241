@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Enhanced Form Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f7f7f7;
+            margin: 0;
+            padding: 0;
+        }
+        main {
+            max-width: 700px;
+            margin: 30px auto;
+            background: #fff;
+            padding: 2em;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        ul, ol {
+            margin-bottom: 1em;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1.5em;
+        }
+        th, td {
+            border: 1px solid #bbb;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background: #eaeaea;
+        }
+        label {
+            display: block;
+            margin-top: 1em;
+            font-weight: bold;
+        }
+        input, select, textarea, button {
+            width: 100%;
+            padding: 8px;
+            margin-top: 0.3em;
+            margin-bottom: 1em;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1em;
+        }
+        input[type="checkbox"], input[type="radio"] {
+            width: auto;
+            margin-right: 0.5em;
+        }
+        .form-section {
+            margin-bottom: 2em;
+        }
+        .media-section img, .media-section video {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin-bottom: 1em;
+        }
+        .media-section audio {
+            width: 100%;
+            margin-bottom: 1em;
+        }
+        footer {
+            text-align: center;
+            color: #888;
+            margin-top: 2em;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Enhanced HTML5 Form Example</h1>
+            <p>Demonstrating lists, tables, media, and a complete, accessible form.</p>
+        </header>
+
+        <section>
+            <h2>Favorite Programming Languages</h2>
+            <ul>
+                <li>Python</li>
+                <li>JavaScript</li>
+                <li>Java</li>
+                <li>HTML &amp; CSS</li>
+                <li>C#</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Fruit Preferences</h2>
+            <ol>
+                <li>Apple</li>
+                <li>Banana</li>
+                <li>Orange</li>
+                <li>Mango</li>
+                <li>Grapes</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>Sample Table: Weekly Coding Hours</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Day</th>
+                        <th>Hours Spent Coding</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Monday</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>Tuesday</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>Wednesday</td>
+                        <td>1.5</td>
+                    </tr>
+                    <tr>
+                        <td>Thursday</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>Friday</td>
+                        <td>2.5</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="media-section">
+            <h2>Media Gallery</h2>
+            <img src="https://images.pexels.com/photos/1366913/pexels-photo-1366913.jpeg" alt="Assorted color horses on grass fields near tall trees during sunset" width="300" height="200">
+            <video width="320" height="180" controls>
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <audio controls>
+                <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </section>
+
+        <section class="form-section">
+            <h2>Registration Form</h2>
+            <form action="#" method="post" autocomplete="on">
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required autocomplete="name">
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="example@email.com" required autocomplete="email">
+
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Choose a username" required autocomplete="username">
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Create a password" required minlength="6" autocomplete="new-password">
+
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob" name="dob" required>
+
+                <label for="country">Country</label>
+                <select id="country" name="country" required>
+                    <option value="">Select your country</option>
+                    <option value="us">United States</option>
+                    <option value="uk">United Kingdom</option>
+                    <option value="ca">Canada</option>
+                    <option value="au">Australia</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <label>Gender</label>
+                <input type="radio" id="male" name="gender" value="male" required>
+                <label for="male" style="display:inline;">Male</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female" style="display:inline;">Female</label>
+                <input type="radio" id="other" name="gender" value="other">
+                <label for="other" style="display:inline;">Other</label>
+
+                <label>
+                    <input type="checkbox" name="terms" required>
+                    I agree to the <a href="terms and conditions.html" target="_blank">terms and conditions</a>
+                </label>
+
+                <label for="bio">Short Bio</label>
+                <textarea id="bio" name="bio" rows="3" placeholder="Tell us about yourself" maxlength="200"></textarea>
+
+                <label for="referral">Referral Code</label>
+                <input type="text" id="referral" name="referral" value="WELCOME2025" readonly>
+
+                <button type="submit">Register</button>
+            </form>
+        </section>
+
+        <footer>
+            &copy; 2025 Enhanced Form Example. All rights reserved.
+        </footer>
+    </main>
+</body>
+</html>
